@@ -15,7 +15,7 @@ class HomeView: UIViewController  {
     
     private var controller: HomeControllerProtocol?  
     
-     var notes: [String] = []
+    private var notes: [String] = []
     
     private lazy var noteSearchBar: UISearchBar = {
         let view = UISearchBar()
@@ -29,7 +29,7 @@ class HomeView: UIViewController  {
         return view
     }()
     
-     lazy var notesCollectionView: UICollectionView = {
+    private lazy var notesCollectionView: UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -118,6 +118,7 @@ extension HomeView: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NotesCVCell.reuseID, for: indexPath) as! NotesCVCell
         cell.fill(title: notes[indexPath.row])
         cell.index = indexPath.row
+        cell.delegate = self
         cell.view = self
         return cell
     }
@@ -134,4 +135,12 @@ extension HomeView: HomeViewProtocol {
         self.notes = notes
         notesCollectionView.reloadData() //отрисоваться заново
     }
+}
+extension HomeView: NoteCVCellDelegate {
+    func didremoveButton(index: Int) {
+        notes.remove(at: index)
+        notesCollectionView.reloadData()
+    }
+    
+    
 }

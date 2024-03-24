@@ -105,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				C03C442B2BAEDE4200601894 /* HomeView.swift */,
-				C03C443E2BAF621A00601894 /* NotesCVCell.swift */,
 				C03C44472BAF81B700601894 /* Cells */,
 				C03C44432BAF816C00601894 /* HomeController.swift */,
 				C03C44452BAF818400601894 /* HomeModel.swift */,
@@ -116,6 +115,7 @@
 		C03C44472BAF81B700601894 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C03C443E2BAF621A00601894 /* NotesCVCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

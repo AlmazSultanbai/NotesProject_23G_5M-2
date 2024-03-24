@@ -24,5 +24,6 @@ class HomeModel: HomeModelProtocol {
     
     func getNote() {
         controller?.onSuccessNotes(notes: notes)
+        
     }
 }

@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol NoteCVCellDelegate: AnyObject {
+    
+    func didremoveButton(index: Int)
+    
+}
+
 class NotesCVCell: UICollectionViewCell {
     
     
@@ -18,6 +24,8 @@ class NotesCVCell: UICollectionViewCell {
     var index: Int?
     
     let colors: [UIColor] = [.systemBlue, .lightGray, .systemMint, .systemCyan]
+    
+    weak var delegate: NoteCVCellDelegate?
     
     private lazy var cellLabel: UILabel = {
         let view = UILabel()
@@ -47,8 +55,7 @@ class NotesCVCell: UICollectionViewCell {
     
     @objc func deleteButtonTapped() {
         guard let index = index else { return }
-        view?.notes.remove(at: index)
-        view?.notesCollectionView.reloadData()
+        delegate?.didremoveButton(index: index)
     }
     
     
@@ -76,10 +83,5 @@ class NotesCVCell: UICollectionViewCell {
         cellLabel.text = title
         
     }
-    
-   
-    
-    
-   
-    
 }
+
