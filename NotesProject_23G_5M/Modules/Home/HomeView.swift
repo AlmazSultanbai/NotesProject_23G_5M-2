@@ -13,11 +13,9 @@ protocol HomeViewProtocol {
 
 class HomeView: UIViewController  {
     
-   
+    private var controller: HomeControllerProtocol?  
     
-    private var controller: HomeControllerProtocol?
-    
-    private var notes: [String] = []
+     var notes: [String] = []
     
     private lazy var noteSearchBar: UISearchBar = {
         let view = UISearchBar()
@@ -25,15 +23,13 @@ class HomeView: UIViewController  {
         return view
     }()
     
-    
-    
     private lazy var noteLabel: UILabel = {
         let view = UILabel()
         view.text = "Notes"
         return view
     }()
     
-    private lazy var notesCollectionView: UICollectionView = {
+     lazy var notesCollectionView: UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -121,6 +117,8 @@ extension HomeView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NotesCVCell.reuseID, for: indexPath) as! NotesCVCell
         cell.fill(title: notes[indexPath.row])
+        cell.index = indexPath.row
+        cell.view = self
         return cell
     }
 }
