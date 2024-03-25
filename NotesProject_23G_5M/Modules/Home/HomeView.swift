@@ -57,6 +57,12 @@ class HomeView: UIViewController  {
         controller?.onGetNotes()
         setupNavigationItem()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "theme") == true {
+            view.overrideUserInterfaceStyle = .dark
+        } else { view.overrideUserInterfaceStyle = .light }
         
         
     }

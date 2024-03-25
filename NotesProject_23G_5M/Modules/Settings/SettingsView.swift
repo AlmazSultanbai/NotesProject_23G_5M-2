@@ -30,10 +30,18 @@ class SettingsView: UIViewController, SettingsViewProtocol {
    override func viewDidLoad() {
         super.viewDidLoad()
        view.backgroundColor = .systemBackground
-        controller? = SettingsController(view: self)
+        controller = SettingsController(view: self)
        setupConstraits()
        
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "theme") == true {
+            view.overrideUserInterfaceStyle = .dark
+        } else { view.overrideUserInterfaceStyle = .light }
+        
+        
+    }
+
     
     func setupConstraits() {
         view.addSubview(settingsTableView)
@@ -73,14 +81,14 @@ extension SettingsView: UITableViewDelegate { //  в делегате настр
 
 extension SettingsView: SettingsCellDelegate {
     func didSwitchOn(isOn: Bool) {
+        UserDefaults.standard.set(isOn, forKey: "theme")
         if isOn {
             view.overrideUserInterfaceStyle = .dark
         } else {
             view.overrideUserInterfaceStyle = .light
         }
+        
     }
-    
-    
 }
 
 //extension SettingsView

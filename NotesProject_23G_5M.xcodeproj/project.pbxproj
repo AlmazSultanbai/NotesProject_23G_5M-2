@@ -126,11 +126,19 @@
 			isa = PBXGroup;
 			children = (
 				C03C44482BAF9FE700601894 /* SettingsView.swift */,
-				C03C44542BB1535800601894 /* SettingsTVCell.swift */,
+				C03C44562BB1887400601894 /* Cells */,
 				C03C444B2BB0077A00601894 /* SettingsController.swift */,
 				C03C444D2BB0079100601894 /* SettingsModel.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		C03C44562BB1887400601894 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C03C44542BB1535800601894 /* SettingsTVCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
