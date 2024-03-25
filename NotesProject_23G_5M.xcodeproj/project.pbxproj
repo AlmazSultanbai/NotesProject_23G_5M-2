@@ -18,6 +18,7 @@
 		C03C44492BAF9FE700601894 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03C44482BAF9FE700601894 /* SettingsView.swift */; };
 		C03C444C2BB0077A00601894 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03C444B2BB0077A00601894 /* SettingsController.swift */; };
 		C03C444E2BB0079100601894 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03C444D2BB0079100601894 /* SettingsModel.swift */; };
+		C03C44552BB1535800601894 /* SettingsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03C44542BB1535800601894 /* SettingsTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C03C44482BAF9FE700601894 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C03C444B2BB0077A00601894 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		C03C444D2BB0079100601894 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		C03C44542BB1535800601894 /* SettingsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				C03C44482BAF9FE700601894 /* SettingsView.swift */,
+				C03C44542BB1535800601894 /* SettingsTVCell.swift */,
 				C03C444B2BB0077A00601894 /* SettingsController.swift */,
 				C03C444D2BB0079100601894 /* SettingsModel.swift */,
 			);
@@ -205,6 +208,7 @@
 				C03C443F2BAF621A00601894 /* NotesCVCell.swift in Sources */,
 				C03C44442BAF816C00601894 /* HomeController.swift in Sources */,
 				C03C44492BAF9FE700601894 /* SettingsView.swift in Sources */,
+				C03C44552BB1535800601894 /* SettingsTVCell.swift in Sources */,
 				C03C44462BAF818400601894 /* HomeModel.swift in Sources */,
 				C03C442C2BAEDE4200601894 /* HomeView.swift in Sources */,
 				C03C44282BAEDE4200601894 /* AppDelegate.swift in Sources */,
